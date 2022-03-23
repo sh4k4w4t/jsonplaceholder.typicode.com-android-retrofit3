@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.alivepython.jsonplaceholder.posts.PostsActivity;
+import com.alivepython.jsonplaceholder.posts_2.Posts_2_activity;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity{
 
 
         button.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), PostsActivity.class)));
+        button2.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Posts_2_activity.class)));
 
 
     }
