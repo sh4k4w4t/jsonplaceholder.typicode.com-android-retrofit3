@@ -1,6 +1,7 @@
 package com.alivepython.jsonplaceholder;
 
 import com.alivepython.jsonplaceholder.posts.ModelClass;
+import com.alivepython.jsonplaceholder.posts_1_comments.ModelClass3;
 
 import java.util.List;
 
@@ -15,6 +16,11 @@ public interface Retrofit_Instance {
 
     @GET("posts/{id}")
     Call<ModelClass> getPosts2List(@Path("id") int id);
+
+
+//    https://jsonplaceholder.typicode.com/posts/2/comments
+    @GET("posts/{id}/comments")
+    Call<List<ModelClass3>> allModelList(@Path("id") int id);
 
 
 }
