@@ -20,6 +20,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Posts_2_activity extends AppCompatActivity {
     TextView userID, id,title,body;
 
+    //model is same as ModelClass in posts
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
