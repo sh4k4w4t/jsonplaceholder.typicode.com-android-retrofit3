@@ -1,6 +1,7 @@
 package com.alivepython.jsonplaceholder.posts;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,6 +13,7 @@ import com.alivepython.jsonplaceholder.R;
 import com.alivepython.jsonplaceholder.Retrofit_Instance;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import retrofit2.Call;
@@ -22,9 +24,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PostsActivity extends AppCompatActivity {
     Retrofit_Instance retrofit_instance;
-    List<ModelClass> allList = new ArrayList<>();
+
     RecyclerView postRecycleViewId;
-    Posts_recycleView_adapter adapter;
+
 
 
     @Override
@@ -33,7 +35,7 @@ public class PostsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_posts);
 
         postRecycleViewId= findViewById(R.id.postRecycleViewId);
-        postRecycleViewId.setHasFixedSize(true);
+//        postRecycleViewId.setHasFixedSize(true);
         postRecycleViewId.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
         Retrofit retrofit= new Retrofit.Builder()
@@ -44,20 +46,26 @@ public class PostsActivity extends AppCompatActivity {
         retrofit_instance= retrofit.create(Retrofit_Instance.class);
 
         Call<List<ModelClass>> call= retrofit_instance.getPostsData();
-        call.enqueue(new Callback<List<ModelClass>>() {
+        call.enqueue(new Callback<List<ModelClass>>(){
             @Override
             public void onResponse(Call<List<ModelClass>> call, Response<List<ModelClass>> response) {
                 if (response.isSuccessful()){
                     Toast.makeText(getApplicationContext(), "posts response Success", Toast.LENGTH_SHORT).show();
-                    allList= response.body();
-//                    adapter= new Posts_recycleView_adapter(allList);
-//                    postRecycleViewId.setAdapter(adapter);
+
+                    List<ModelClass> allList= response.body();
+                    Posts_recycleView_adapter adapter= new Posts_recycleView_adapter(allList);
+                    postRecycleViewId.setAdapter(adapter);
+
+
+
                     for (ModelClass modelClass : allList){
                         Log.e("User Id", String.valueOf(modelClass.getUserId()));
                         Log.e("Id", String.valueOf(modelClass.getId()));
                         Log.e("Title", modelClass.getTitle());
                         Log.e("Body", modelClass.getBody());
                     }
+
+
 
                 }
                 else {

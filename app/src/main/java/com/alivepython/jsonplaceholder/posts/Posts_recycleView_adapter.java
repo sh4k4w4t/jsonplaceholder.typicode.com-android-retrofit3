@@ -1,5 +1,6 @@
 package com.alivepython.jsonplaceholder.posts;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,18 +29,19 @@ public class Posts_recycleView_adapter extends RecyclerView.Adapter<Posts_recycl
         return new viewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         ModelClass tempModelClass= allList.get(position);
 
-        holder.user_id.setText(tempModelClass.getUserId());
-        holder.id.setText(tempModelClass.getId());
+        holder.user_id.setText(Integer.toString(tempModelClass.getUserId()));
+        holder.id.setText(Integer.toString(tempModelClass.getId()));
         holder.title.setText(tempModelClass.getTitle());
         holder.body.setText(tempModelClass.getBody());
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount(){
         if (allList==null || allList.size()==0){
             return 0;
         }
