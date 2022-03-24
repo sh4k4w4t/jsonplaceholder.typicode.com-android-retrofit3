@@ -2,6 +2,7 @@ package com.alivepython.jsonplaceholder;
 
 import com.alivepython.jsonplaceholder.posts.ModelClass;
 import com.alivepython.jsonplaceholder.posts_1_comments.ModelClass3;
+import com.alivepython.jsonplaceholder.withPhoto.WithPhotoModelClass;
 
 import java.util.List;
 
@@ -26,6 +27,10 @@ public interface Retrofit_Instance {
 //    https://jsonplaceholder.typicode.com/comments?postId=1
     @GET("comments")
     Call<List<ModelClass3>> allPostIDList(@Query("postId") int postId);
+
+//    https://jsonplaceholder.typicode.com/photos
+    @GET("photos")
+    Call<List<WithPhotoModelClass>> allPhotoWithDetails();
 
 
 }
