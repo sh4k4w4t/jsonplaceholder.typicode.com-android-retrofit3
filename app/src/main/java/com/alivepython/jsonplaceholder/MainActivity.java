@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.alivepython.jsonplaceholder.comments_postid_2.Comment_post_id_1;
 import com.alivepython.jsonplaceholder.posts.PostsActivity;
 import com.alivepython.jsonplaceholder.posts_1_comments.Posts_1_comments;
 import com.alivepython.jsonplaceholder.posts_2.Posts_2_activity;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity{
         button.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), PostsActivity.class)));
         button2.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Posts_2_activity.class)));
         button3.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Posts_1_comments.class)));
+        button4.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Comment_post_id_1.class)));
 
 
     }

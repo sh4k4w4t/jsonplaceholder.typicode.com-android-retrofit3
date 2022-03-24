@@ -8,6 +8,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface Retrofit_Instance {
 
@@ -21,6 +22,10 @@ public interface Retrofit_Instance {
 //    https://jsonplaceholder.typicode.com/posts/2/comments
     @GET("posts/{id}/comments")
     Call<List<ModelClass3>> allModelList(@Path("id") int id);
+
+//    https://jsonplaceholder.typicode.com/comments?postId=1
+    @GET("comments")
+    Call<List<ModelClass3>> allPostIDList(@Query("postId") int postId);
 
 
 }

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JsonPlaceHolder">
         <activity
+            android:name=".comments_postid_2.Comment_post_id_1"
+            android:exported="false" />
+        <activity
             android:name=".posts_1_comments.Posts_1_comments"
             android:exported="false" />
         <activity
