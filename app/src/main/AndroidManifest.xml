@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JsonPlaceHolder">
         <activity
+            android:name=".users.Users"
+            android:exported="false" />
+        <activity
             android:name=".withPhoto.WithPhoto"
             android:exported="false" />
         <activity

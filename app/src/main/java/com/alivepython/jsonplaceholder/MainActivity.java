@@ -10,11 +10,12 @@ import com.alivepython.jsonplaceholder.comments_postid_2.Comment_post_id_1;
 import com.alivepython.jsonplaceholder.posts.PostsActivity;
 import com.alivepython.jsonplaceholder.posts_1_comments.Posts_1_comments;
 import com.alivepython.jsonplaceholder.posts_2.Posts_2_activity;
+import com.alivepython.jsonplaceholder.users.Users;
 import com.alivepython.jsonplaceholder.withPhoto.WithPhoto;
 
 public class MainActivity extends AppCompatActivity{
 
-    Button button,button2,button3,button4,button5;
+    Button button,button2,button3,button4,button5,button6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity{
         button3= findViewById(R.id.button3);
         button4= findViewById(R.id.button4);
         button5=findViewById(R.id.button5);
+        button6=findViewById(R.id.button6);
 
 
         button.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), PostsActivity.class)));
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity{
         button3.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Posts_1_comments.class)));
         button4.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Comment_post_id_1.class)));
         button5.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), WithPhoto.class)));
+        button6.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Users.class)));
 
 
     }

@@ -2,6 +2,7 @@ package com.alivepython.jsonplaceholder;
 
 import com.alivepython.jsonplaceholder.posts.ModelClass;
 import com.alivepython.jsonplaceholder.posts_1_comments.ModelClass3;
+import com.alivepython.jsonplaceholder.users.User_model_final_3;
 import com.alivepython.jsonplaceholder.withPhoto.WithPhotoModelClass;
 
 import java.util.List;
@@ -31,6 +32,10 @@ public interface Retrofit_Instance {
 //    https://jsonplaceholder.typicode.com/photos
     @GET("photos")
     Call<List<WithPhotoModelClass>> allPhotoWithDetails();
+
+//    https://jsonplaceholder.typicode.com/users
+    @GET("users")
+    Call<List<User_model_final_3>> getFullDetails();
 
 
 }
