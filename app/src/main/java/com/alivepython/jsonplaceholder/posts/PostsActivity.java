@@ -35,7 +35,6 @@ public class PostsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_posts);
 
         postRecycleViewId= findViewById(R.id.postRecycleViewId);
-//        postRecycleViewId.setHasFixedSize(true);
         postRecycleViewId.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
         Retrofit retrofit= new Retrofit.Builder()

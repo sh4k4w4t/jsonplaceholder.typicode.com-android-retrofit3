@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.AbsListView;
 import android.widget.Toast;
 
 import com.alivepython.jsonplaceholder.R;
@@ -39,9 +38,6 @@ public class Comment_post_id_1 extends AppCompatActivity {
 
         Retrofit_Instance instance= retrofit.create(Retrofit_Instance.class);
         Call<List<ModelClass3>> all1= instance.allPostIDList(1);
-
-//        https://jsonplaceholder.typicode.com/comments?postId=1
-//        https://jsonplaceholder.typicode.com/posts/1/comments
 
         all1.enqueue(new Callback<List<ModelClass3>>() {
             @Override

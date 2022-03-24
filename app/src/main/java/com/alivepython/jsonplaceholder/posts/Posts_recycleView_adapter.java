@@ -11,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.alivepython.jsonplaceholder.R;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 public class Posts_recycleView_adapter extends RecyclerView.Adapter<Posts_recycleView_adapter.viewHolder>{

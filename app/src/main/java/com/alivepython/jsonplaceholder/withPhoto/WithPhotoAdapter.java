@@ -2,10 +2,6 @@ package com.alivepython.jsonplaceholder.withPhoto;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.alivepython.jsonplaceholder.R;
 import com.squareup.picasso.Picasso;
 
-import java.io.InputStream;
 import java.util.List;
 
 public class WithPhotoAdapter extends RecyclerView.Adapter<WithPhotoAdapter.viewHolder>{
@@ -44,8 +39,6 @@ public class WithPhotoAdapter extends RecyclerView.Adapter<WithPhotoAdapter.view
         holder.albumId.setText(withPhotoModelClass.getAlbumId()+"");
         holder.id.setText(withPhotoModelClass.getId()+"");
         holder.title.setText(withPhotoModelClass.getTitle());
-
-
 
         Picasso.get()
                 .load(withPhotoModelClass.getThumbnailUrl()+"")
@@ -84,32 +77,4 @@ public class WithPhotoAdapter extends RecyclerView.Adapter<WithPhotoAdapter.view
 
         }
     }
-
-
-//    private class DownloadImageFromInternet extends AsyncTask<String,Void, Bitmap>{
-//
-//        ImageView imageView;
-//
-//        public DownloadImageFromInternet(ImageView imageView) {
-//            this.imageView = imageView;
-//        }
-//
-//        @Override
-//        protected Bitmap doInBackground(String... strings) {
-//            String imageUrl= strings[0];
-//            Bitmap bimage= null;
-//            try{
-//                InputStream in= new java.net.URL(imageUrl).openStream();
-//                bimage= BitmapFactory.decodeStream(in);
-//            }catch (Exception e){
-//                Log.e("Error message", e.getMessage() );
-//                e.printStackTrace();
-//            }
-//            return bimage;
-//        }
-//
-//        protected void onPostExecute(Bitmap result){
-//            imageView.setImageBitmap(result);
-//        }
-//    }
 }
