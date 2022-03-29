@@ -11,6 +11,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.PATCH;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -41,7 +42,8 @@ public interface Retrofit_Instance {
     Call<List<User_model_final_3>> getFullDetails();
 
 
-    //put
+    //put patch same. Put change all info, Patch change one or more then one info.
+//    @PATCH("posts/{id}")
     @PUT("posts/{id}")
     Call<Model_structure_put_patch_delete> put_response_put_patch_delete(@Path("id") int id,
                                                                          @Body Model_structure_put_patch_delete model_structure_put_patch_delete);
