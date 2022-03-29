@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JsonPlaceHolder">
         <activity
+            android:name=".put_patch_delete.Put_Patch"
+            android:exported="false" />
+        <activity
+            android:name=".post_posts_formPost_uncompleted.Post_posts_activity"
+            android:exported="false" />
+        <activity
             android:name=".users.Users"
             android:exported="false" />
         <activity
