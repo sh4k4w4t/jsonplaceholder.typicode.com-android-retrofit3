@@ -1,5 +1,6 @@
 package com.alivepython.jsonplaceholder;
 
+import com.alivepython.jsonplaceholder.onlyPosts.Model_Response_JsonPlaceHolderApi;
 import com.alivepython.jsonplaceholder.posts.ModelClass;
 import com.alivepython.jsonplaceholder.posts_1_comments.ModelClass3;
 import com.alivepython.jsonplaceholder.put_patch_delete.Model_structure_put_patch_delete;
@@ -11,8 +12,11 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.PATCH;
+import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -41,6 +45,14 @@ public interface Retrofit_Instance {
 //    https://jsonplaceholder.typicode.com/users
     @GET("users")
     Call<List<User_model_final_3>> getFullDetails();
+
+    @FormUrlEncoded
+    @POST("posts")
+    Call<Model_Response_JsonPlaceHolderApi> responseModel(
+            @Field("title") String title,
+            @Field("body") String body,
+            @Field("userId") int userId
+    );
 
 
     //put patch same. Put change all info, Patch change one or more then one info.

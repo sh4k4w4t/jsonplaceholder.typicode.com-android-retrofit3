@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JsonPlaceHolder">
         <activity
+            android:name=".onlyPosts.JsonPlaceHolderPostActivity"
+            android:exported="false" />
+        <activity
             android:name=".put_patch_delete.Delete_activity"
             android:exported="false" />
         <activity

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.alivepython.jsonplaceholder.comments_postid_2.Comment_post_id_1;
+import com.alivepython.jsonplaceholder.onlyPosts.JsonPlaceHolderPostActivity;
 import com.alivepython.jsonplaceholder.post_posts_formPost_uncompleted.Post_posts_activity;
 import com.alivepython.jsonplaceholder.posts.PostsActivity;
 import com.alivepython.jsonplaceholder.posts_1_comments.Posts_1_comments;
@@ -18,7 +19,7 @@ import com.alivepython.jsonplaceholder.withPhoto.WithPhoto;
 
 public class MainActivity extends AppCompatActivity{
 
-    Button button,button2,button3,button4,button5,button6,button7,button8,button9;
+    Button button,button2,button3,button4,button5,button6,button7,button8,button9,button10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity{
         button7=findViewById(R.id.button7);
         button8=findViewById(R.id.button8);
         button9=findViewById(R.id.button9);
+        button10=findViewById(R.id.button10);
 
 
         button.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), PostsActivity.class)));
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity{
         button7.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Post_posts_activity.class)));
         button8.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Put_Patch_activity.class)));
         button9.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Delete_activity.class)));
+        button10.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), JsonPlaceHolderPostActivity.class)));
 
 
     }
