@@ -25,7 +25,13 @@ public class Put_Patch extends AppCompatActivity {
         setContentView(R.layout.activity_put_patch);
 
         retrofit_instance= Retrofit_client.getServices();
-        model_structure_put_patch_delete= new Model_structure_put_patch_delete("Lets Study","",3);
+        //for PUT > for put give all value
+//        model_structure_put_patch_delete= new Model_structure_put_patch_delete("Lets Study","this body",3);
+
+        //for PATCH  > for patch give needed value, which want to change
+        model_structure_put_patch_delete= new Model_structure_put_patch_delete("Lets Study",null,3);
+
+
         loadInformation();
     }
 

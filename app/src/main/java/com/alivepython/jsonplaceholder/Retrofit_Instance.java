@@ -43,8 +43,8 @@ public interface Retrofit_Instance {
 
 
     //put patch same. Put change all info, Patch change one or more then one info.
-//    @PATCH("posts/{id}")
-    @PUT("posts/{id}")
+    @PATCH("posts/{id}")
+//    @PUT("posts/{id}")
     Call<Model_structure_put_patch_delete> put_response_put_patch_delete(@Path("id") int id,
                                                                          @Body Model_structure_put_patch_delete model_structure_put_patch_delete);
 
