@@ -10,6 +10,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.PATCH;
 import retrofit2.http.PUT;
@@ -48,5 +49,7 @@ public interface Retrofit_Instance {
     Call<Model_structure_put_patch_delete> put_response_put_patch_delete(@Path("id") int id,
                                                                          @Body Model_structure_put_patch_delete model_structure_put_patch_delete);
 
-
+    //DELETE
+    @DELETE("posts/{id}")
+    Call<Void> requestForDeleteID(@Path("id") int id);
 }

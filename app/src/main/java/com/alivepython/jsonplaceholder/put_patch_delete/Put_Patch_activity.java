@@ -14,7 +14,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Put_Patch extends AppCompatActivity {
+public class Put_Patch_activity extends AppCompatActivity {
 
     Retrofit_Instance retrofit_instance;
     Model_structure_put_patch_delete model_structure_put_patch_delete;

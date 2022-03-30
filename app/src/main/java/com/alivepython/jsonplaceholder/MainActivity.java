@@ -11,13 +11,14 @@ import com.alivepython.jsonplaceholder.post_posts_formPost_uncompleted.Post_post
 import com.alivepython.jsonplaceholder.posts.PostsActivity;
 import com.alivepython.jsonplaceholder.posts_1_comments.Posts_1_comments;
 import com.alivepython.jsonplaceholder.posts_2.Posts_2_activity;
-import com.alivepython.jsonplaceholder.put_patch_delete.Put_Patch;
+import com.alivepython.jsonplaceholder.put_patch_delete.Delete_activity;
+import com.alivepython.jsonplaceholder.put_patch_delete.Put_Patch_activity;
 import com.alivepython.jsonplaceholder.users.Users;
 import com.alivepython.jsonplaceholder.withPhoto.WithPhoto;
 
 public class MainActivity extends AppCompatActivity{
 
-    Button button,button2,button3,button4,button5,button6,button7,button8;
+    Button button,button2,button3,button4,button5,button6,button7,button8,button9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity{
         button6=findViewById(R.id.button6);
         button7=findViewById(R.id.button7);
         button8=findViewById(R.id.button8);
+        button9=findViewById(R.id.button9);
 
 
         button.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), PostsActivity.class)));
@@ -41,7 +43,8 @@ public class MainActivity extends AppCompatActivity{
         button5.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), WithPhoto.class)));
         button6.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Users.class)));
         button7.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Post_posts_activity.class)));
-        button8.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Put_Patch.class)));
+        button8.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Put_Patch_activity.class)));
+        button9.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), Delete_activity.class)));
 
 
     }
